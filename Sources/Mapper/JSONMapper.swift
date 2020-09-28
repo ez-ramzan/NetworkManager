@@ -16,7 +16,7 @@ open class JSONMapper<Model>: MapperProtocol where Model: Mappable {
     public typealias ObjectType = Model
     
     ///Methode for transformations data to result with Mappable object or WebError.
-    public static func map(_ data: Data) -> Result<Model, WebError> {
+    open class func map(_ data: Data) -> Result<Model, WebError> {
         guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] else {
             return .failure(WebError(serviceError: .jsonСonversion, systemError: nil))
         }
