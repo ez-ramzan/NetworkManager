@@ -23,4 +23,9 @@ public struct WebError: Error {
     var localizedDescription: String {
         return "failed with \(serviceError)"
     }
+    
+    public init(serviceError: WebServiceError, systemError: Error? = nil) {
+        self.serviceError = serviceError
+        self.systemError = systemError
+    }
 }
