@@ -18,4 +18,10 @@ public struct HTTPHeader {
     
     ///Header field value.
     public let value: String
+    
+    ///Init HTTPHeader
+    public init(field: String, value: String) {
+        self.field = field
+        self.value = value
+    }
 }
