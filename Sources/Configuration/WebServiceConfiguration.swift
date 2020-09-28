@@ -17,7 +17,7 @@ public final class WebServiceConfiguration: WebServiceConfigurationProtocol {
     public var cachePolicy: URLRequest.CachePolicy
     public var timeout: TimeInterval
     
-    init(url: URL, headers: [HTTPHeader]? = nil, cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy, timeout: TimeInterval = 60) {
+    public init(url: URL, headers: [HTTPHeader]? = nil, cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy, timeout: TimeInterval = 60) {
         self.url = url
         self.headers = headers
         self.cachePolicy = cachePolicy
