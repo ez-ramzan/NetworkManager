@@ -14,8 +14,8 @@ public struct HTTPHeader {
     
     
     ///Header field name.
-    let field: String
+    public let field: String
     
     ///Header field value.
-    let value: String
+    public let value: String
 }
