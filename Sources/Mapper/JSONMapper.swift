@@ -10,7 +10,7 @@ import Foundation
 
 ///Object witch can transform json data to object type of mappable  model.
 
-public class JSONMapper<Model>: MapperProtocol where Model: Mappable {
+open class JSONMapper<Model>: MapperProtocol where Model: Mappable {
     
     ///Specific type of Mappable object.
     public typealias ObjectType = Model
